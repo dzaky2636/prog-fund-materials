@@ -47,7 +47,6 @@ Here are the 6 standard flowchart symbols we will use:
 
 ---
 ## 2. The Three Basic Control Structures
-![image](https://i.imgur.com/mJqnZ0l.png)
 Algorithms have three basic control structures:
 1. **Sequence:** The straightforward execution of one processing step after another. Instructions are executed one by one, from top to bottom, without branching.
 2. **Selection:** The presentation of a condition and the choice between two actions, the choice depending on whether the condition is true or false. This structure uses the Decision (Diamond) symbol.

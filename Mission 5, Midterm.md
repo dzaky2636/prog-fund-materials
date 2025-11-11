@@ -27,6 +27,10 @@ D. Circle (Connector)
 
 **Q3: Consider the following pseudocode:**
 ```pseudocode
+DECLARE x AS INTEGER
+DECLARE y AS INTEGER
+
+START
 SET x = 10
 SET y = 20
 
@@ -39,6 +43,7 @@ ELSE
         WRITE "C"
     ENDIF
 ENDIF
+STOP
 ```
 What is the output of the code above?
 A. A
@@ -56,12 +61,17 @@ D. WHILE is definite iteration, DO-WHILE is indefinite iteration.
 
 **Q5: Consider the following pseudocode:**
 ```pseudocode
+DECLARE total AS INTEGER
+DECLARE i AS INTEGER
+
+START
 SET total = 0
 FOR i = 1 TO 4
     SET total = total + i
 ENDFOR
 
 WRITE total
+STOP
 ```
 What value of total will be printed at the end?
 A. 4
@@ -84,9 +94,13 @@ MODULE Double(REF number)
 END MODULE
 
 // Main Program
+DECLARE my_value AS INTEGER
+
+START
 SET my_value = 5
 Double(my_value)
 WRITE my_value
+STOP
 ```
 What is the output of the main program above?
 A. 5
@@ -97,11 +111,15 @@ D. Error
 
 **Q8: Consider this pseudocode:**
 ```pseudocode
+DECLARE x AS INTEGER
+
+START
 SET x = 5
 
 WHILE x < 5
     WRITE "Loop running"
 ENDWHILE
+STOP
 ```
 What is the output of the code above?
 A. Loop running
@@ -119,6 +137,10 @@ D. Pass-by-Reference.
 
 **Q10: (Logic Challenge) Consider the following pseudocode:**
 ```pseudocode
+DECLARE a AS INTEGER
+DECLARE b AS INTEGER
+
+START
 SET a = 5
 SET b = 10
 
@@ -136,6 +158,7 @@ ENDIF
 
 WRITE a
 WRITE b
+STOP
 ```
 What is the final output of this program?
 A. 4 and 11

@@ -56,41 +56,56 @@ Parameters are data items transferred from a calling module to its subordinate m
 ### Example: From Monolithic to Modular
 **Non-modular (monolithic) algorithm:**
 ```pseudocode
+DECLARE hours_worked AS INTEGER
+DECLARE hourly_rate AS REAL
+DECLARE weekly_pay AS REAL
+DECLARE overtime_hours AS INTEGER
+DECLARE overtime_pay AS REAL
+
+START
 READ hours_worked
 READ hourly_rate
 
 IF hours_worked <= 35 THEN
-    weekly_pay = hourly_rate * hours_worked
+    SET weekly_pay = hourly_rate * hours_worked
 ELSE
-    overtime_hours = hours_worked - 35
-    overtime_pay = overtime_hours * hourly_rate * 1.5
-    weekly_pay = (hourly_rate * 35) + overtime_pay
+    SET overtime_hours = hours_worked - 35
+    SET overtime_pay = overtime_hours * hourly_rate * 1.5
+    SET weekly_pay = (hourly_rate * 35) + overtime_pay
 ENDIF
 
 WRITE weekly_pay
+STOP
 ```
 
 **Now, let's make it modular:**
 ```pseudocode
 // Main Program (Mainline)
+DECLARE hours_worked AS INTEGER
+DECLARE hourly_rate AS REAL
+
+START
 READ hours_worked
 READ hourly_rate
 
 // Call module and pass parameters
 Calculate_Employee_Pay(hours_worked, hourly_rate)
-
-END
+STOP
 ```
 
 ```pseudocode
 // --- Separate Module Definition ---
 MODULE Calculate_Employee_Pay(hours, rate)
+    DECLARE weekly_pay AS REAL
+    DECLARE overtime_hrs AS INTEGER
+    DECLARE overtime_pay AS REAL
+
     IF hours <= 35 THEN
-        weekly_pay = rate * hours
+        SET weekly_pay = rate * hours
     ELSE
-        overtime_hrs = hours - 35
-        overtime_pay = overtime_hrs * rate * 1.5
-        weekly_pay = (rate * 35) + overtime_pay
+        SET overtime_hrs = hours - 35
+        SET overtime_pay = overtime_hrs * rate * 1.5
+        SET weekly_pay = (rate * 35) + overtime_pay
     ENDIF
     
     WRITE weekly_pay
@@ -152,9 +167,13 @@ MODULE AddOne(counter)
 END MODULE
 
 // Main Program
+DECLARE my_value AS INTEGER
+
+START
 SET my_value = 5
 AddOne(my_value) // Assume this is 'Passing by Value'
 WRITE my_value
+STOP
 ```
 **What is the output from the main program?**
 A. 6

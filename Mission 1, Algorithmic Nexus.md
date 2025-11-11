@@ -58,6 +58,10 @@ Algorithms have three basic control structures:
 
 **Example of Sequence Structure:**
 ```
+DECLARE student_name AS STRING
+DECLARE test_score AS INTEGER
+DECLARE grade_points AS REAL
+
 START
 READ student_name
 READ test_score
@@ -99,18 +103,24 @@ Pseudocode is another way of representing algorithms using simple English, witho
 
 * Statements are written in simple English
 * Each instruction is written on a separate line
-* Keywords such as `IF`, `THEN`, `ELSE`, `ENDIF`, `READ`, `WRITE`, `SET` are often used and written in capital letters
+* Keywords such as `DECLARE`, `IF`, `THEN`, `ELSE`, `ENDIF`, `READ`, `WRITE`, `SET` are often used and written in capital letters
+* DECLARE statements must appear at the beginning, before START, to establish variables and their data types
 * Indentation is used to signify particular control structures
 * Each set of instructions is written from top to bottom, with only one entry and one exit
 
 **Example Pseudocode for service charge calculation:**
 ```
+DECLARE account_balance AS REAL
+DECLARE service_charge AS REAL
+
+START
 READ account_balance
     IF account_balance < 300 
         THEN SET service_charge = 5.00 
         ELSE SET service_charge = 2.00 
     ENDIF
 WRITE service_charge
+STOP
 ```
 
 ---
@@ -120,9 +130,10 @@ WRITE service_charge
 **Cadet, attention!** As you progress through your training missions, you'll notice that our terminology becomes more precise and specialized.
 
 **In this foundational mission**, we use simplified, general terms:
+- **DECLARE** - establishing variables and their data types at the beginning of algorithms
 - **READ** - getting data input
 - **WRITE** - producing output  
-- **SET** - assigning values
+- **SET** - assigning values to existing variables
 
 **In advanced missions**, you'll learn more precise terminology:
 - **INPUT/GET** - reading from keyboard
@@ -130,6 +141,31 @@ WRITE service_charge
 - **DISPLAY/OUTPUT** - showing on screen
 - **WRITE** - writing to storage devices  
 - **PRINT** - sending to printer
+
+### Understanding DECLARE vs SET
+
+**DECLARE** and **SET** serve different purposes and cannot be used interchangeably:
+
+**DECLARE:**
+- Used ONLY at the beginning of pseudocode/flowcharts
+- Establishes a variable's existence and data type
+- Format: `DECLARE variable_name AS data_type`
+- Used once per variable to "introduce" it to the algorithm
+- Think of it as "registering" the variable before use
+
+**SET:**
+- Used anywhere in the algorithm for value assignment
+- Assigns or changes values in existing variables
+- Format: `SET variable_name = value` (equivalent to `=` assignment)
+- Can be used multiple times throughout the algorithm
+- Think of it as "filling" the variable with data
+
+**Standard Data Types for DECLARE:**
+- `STRING` - for text values ("Hello", "John Doe")
+- `INTEGER` - for whole numbers (1, 100, -5)
+- `REAL` - for decimal numbers (3.14, 98.6, -2.5)
+- `BOOLEAN` - for true/false values
+- `CHARACTER` - for single characters ('A', 'x', '5')
 
 Think of this like learning basic military commands before specialized operations. We build your understanding in layers, just as real cadets master fundamentals before advanced protocols. This isn't changing the rules—it's expanding your operational vocabulary as your skills develop!
 

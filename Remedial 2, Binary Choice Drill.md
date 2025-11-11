@@ -46,12 +46,16 @@ Let's ensure we master this with some quick exercises!
 ## QUIZ
 **Q1: Consider the following pseudocode:**
 ```
+DECLARE value AS INTEGER
+
+START
 SET value = 15
 IF value > 10 THEN
 	WRITE "Greater"
 ELSE
 	WRITE "Smaller"
 ENDIF
+STOP
 ```
 **What is the output of the code above?**
 A. Greater
@@ -62,12 +66,16 @@ D. No output
 
 **Q2: Consider the following pseudocode:**
 ```
+DECLARE temperature AS INTEGER
+
+START
 SET temperature = 25
 IF temperature <= 20 THEN
 	WRITE "Cold"
 ELSE
 	WRITE "Hot"
 ENDIF
+STOP
 ```
 **What is the output of the code above?**
 A. Cold
@@ -85,13 +93,17 @@ D. No block is executed
 
 **Q4: Consider the following algorithm for checking even/odd numbers:**
 ```
-Prompt user for number
-Get number
+DECLARE number AS INTEGER
+
+START
+WRITE "Enter a number:"
+READ number
 IF number MOD 2 = 0 THEN
-    Display "Even"
+    WRITE "Even"
 ELSE
-    Display "Odd"
+    WRITE "Odd"
 ENDIF
+STOP
 ```
 **If the user enters the number `7`, what is the output?**
 A. Even
@@ -102,6 +114,10 @@ D. Error
 
 **Q5: Consider the following pseudocode:**
 ```
+DECLARE x AS INTEGER
+DECLARE y AS INTEGER
+
+START
 SET x = 5
 SET y = 5
 IF x = y THEN
@@ -109,6 +125,7 @@ IF x = y THEN
 ELSE
 	WRITE "Different"
 ENDIF
+STOP
 ```
 **What is the output of the code above?**
 A. Same

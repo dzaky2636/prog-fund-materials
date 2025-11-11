@@ -80,6 +80,10 @@ This is the most common form. "IF condition is True, do A, OTHERWISE (False), do
 
 **Example Pseudocode:**
 ```
+DECLARE account_balance AS REAL
+DECLARE service_charge AS REAL
+
+START
 READ account_balance
     IF account_balance < 300 THEN
         SET service_charge = 5.00
@@ -87,6 +91,7 @@ READ account_balance
         SET service_charge = 2.00
     ENDIF
 WRITE service_charge
+STOP
 ```
 Here, only one block (either between `THEN` and `ELSE`, or between `ELSE` and `ENDIF`) will be executed.
 
@@ -95,11 +100,16 @@ This structure is used when we only want to do something if the condition is Tru
 
 **Example Pseudocode:**
 ```
+DECLARE student_attendance AS STRING
+DECLARE part_time_count AS INTEGER
+
+START
 READ student_attendance
     IF student_attendance = "part_time" THEN
         SET part_time_count = part_time_count + 1
     ENDIF
 WRITE part_time_count
+STOP
 ```
 If `student_attendance` is not "part_time", the algorithm will jump directly to `ENDIF` without doing anything.
 
@@ -108,9 +118,15 @@ A combined IF statement contains multiple conditions connected with logical oper
 
 **Example Pseudocode:**
 ```
+DECLARE student_attendance AS STRING
+DECLARE student_gender AS STRING
+DECLARE female_part_time_count AS INTEGER
+
+START
 IF student_attendance = "part_time" AND student_gender = "female" THEN
     SET female_part_time_count = female_part_time_count + 1
 ENDIF
+STOP
 ```
 If connector AND is used, both conditions must be true for the combined condition to be true.
 
@@ -119,6 +135,14 @@ This occurs when one `IF` structure is inside another `IF` structure. Used for m
 
 * **Linear Nested IF:** Used when a field is being tested for various values and a different action is taken for each value.
     ```
+    DECLARE record_code AS CHARACTER
+    DECLARE counter_A AS INTEGER
+    DECLARE counter_B AS INTEGER
+    DECLARE counter_C AS INTEGER
+    DECLARE error_counter AS INTEGER
+
+    START
+    READ record_code
     IF record_code = 'A' THEN
         SET counter_A = counter_A + 1
     ELSE
@@ -132,10 +156,21 @@ This occurs when one `IF` structure is inside another `IF` structure. Used for m
             ENDIF
         ENDIF
     ENDIF
+    STOP
     ```
 
 * **Non-Linear Nested IF:** Occurs when multiple different conditions need to be satisfied before a particular action can occur.
     ```
+    DECLARE student_attendance AS STRING
+    DECLARE student_gender AS STRING
+    DECLARE student_age AS INTEGER
+    DECLARE mature_female_pt_students AS INTEGER
+    DECLARE young_female_pt_students AS INTEGER
+    DECLARE male_pt_students AS INTEGER
+    DECLARE full_time_students AS INTEGER
+
+    START
+    READ student_attendance, student_gender, student_age
     IF student_attendance = "part_time" THEN
         IF student_gender = "female" THEN
             IF student_age > 21 THEN
@@ -149,6 +184,7 @@ This occurs when one `IF` structure is inside another `IF` structure. Used for m
     ELSE
         SET full_time_students = full_time_students + 1
     ENDIF
+    STOP
     ```
 
 ### E. Case Structure
@@ -156,12 +192,21 @@ The case structure is another way of expressing a linear nested IF statement. It
 
 **Example Pseudocode:**
 ```
+DECLARE record_code AS CHARACTER
+DECLARE counter_A AS INTEGER
+DECLARE counter_B AS INTEGER
+DECLARE counter_C AS INTEGER
+DECLARE error_counter AS INTEGER
+
+START
+READ record_code
 CASE OF record_code
     'A' : SET counter_A = counter_A + 1
     'B' : SET counter_B = counter_B + 1
     'C' : SET counter_C = counter_C + 1
     other : SET error_counter = error_counter + 1
 ENDCASE
+STOP
 ```
 This logic is **identical** to the Linear Nested IF example above, but much cleaner.
 
@@ -217,6 +262,11 @@ D. All types of loops
 **Q5: (Logic Quiz) Consider the following case study: A grading program assigns grades. If score >= 90, grade 'A'. If score 80-89, grade 'B'. If score 70-79, grade 'C'. Which pseudocode is most appropriate?**
 A.
 ```
+DECLARE score AS INTEGER
+DECLARE grade AS CHARACTER
+
+START
+READ score
 IF score >= 90 THEN
 	SET grade = 'A'
 ENDIF
@@ -226,17 +276,31 @@ ENDIF
 IF score >= 70 THEN
 	SET grade = 'C'
 ENDIF
+WRITE grade
+STOP
 ```
 B.
 ```
+DECLARE score AS INTEGER
+DECLARE grade AS CHARACTER
+
+START
+READ score
 CASE OF score
 	90 : SET grade = 'A'
 	80 : SET grade = 'B'
 	70 : SET grade = 'C'
 ENDCASE
+WRITE grade
+STOP
 ```
 C.
 ```
+DECLARE score AS INTEGER
+DECLARE grade AS CHARACTER
+
+START
+READ score
 IF score >= 90 THEN
 	SET grade = 'A'
 ELSE
@@ -248,9 +312,16 @@ ELSE
 		ENDIF
 	ENDIF
 ENDIF
+WRITE grade
+STOP
 ```
 D.
 ```
+DECLARE score AS INTEGER
+DECLARE grade AS CHARACTER
+
+START
+READ score
 IF score >= 90 THEN
 	SET grade = 'A'
 ELSE
@@ -258,5 +329,7 @@ ELSE
 ELSE
 	SET grade = 'C'
 ENDIF
+WRITE grade
+STOP
 ```
 **Answer: C**

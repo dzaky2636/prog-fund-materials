@@ -22,11 +22,15 @@ The loop is repeated when the condition is true (when its value is not 0). The l
 
 **Example Pseudocode:**
 ```
+DECLARE counter AS INTEGER
+
+START
 SET counter = 1                  ← Initialization
 WHILE counter <= 5               ← Testing
 	WRITE "Hello world"
 	SET counter = counter + 1     ← Updating
 ENDWHILE
+STOP
 ```
 * **Output:** "Hello world" will be printed 5 times. On the 6th iteration, `counter` will become 6. The condition `6 <= 5` is `False`, so the loop stops.
 ### DO-WHILE Loop (Post-Test)
@@ -39,11 +43,15 @@ As a result, the DO-WHILE loop always performs at least one iteration, even if i
 
 **Example Pseudocode:**
 ```
+DECLARE number AS INTEGER
+
+START
 SET number = 0                    ← Initialization
 DO
 	WRITE number
 	SET number = number + 1         ← Updating
 WHILE number < 10                   ← Testing
+STOP
 ```
 * **Output:** This will print numbers 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9.
 ### DO-UNTIL Loop
@@ -56,6 +64,9 @@ Sometimes, it is more convenient to write a loop that iterates until a condition
 
 **Example Pseudocode (Password Validation):**
 ```
+DECLARE password AS STRING
+
+START
 SET password = ""                ← Initialization (empty password)
 DO
 	WRITE "Enter the password:"
@@ -65,6 +76,7 @@ DO
 	ENDIF
 UNTIL password == "prospero"     ← Testing (condition check)
 WRITE "Password confirmed."
+STOP
 ```
 * **Logic:** The loop will continue running (`Sorry, try again.`) as long as `password != "prospero"` (the `UNTIL` condition is `False`). It only stops when the user enters "prospero" (the `UNTIL` condition becomes `True`).
 ## 3. Counter-Controlled Repetition
@@ -84,12 +96,17 @@ In some situations, it is also helpful to use the counter variable in a calculat
 
 **Example Pseudocode:**
 ```
+DECLARE counter AS INTEGER
+DECLARE square AS INTEGER
+
+START
 WRITE "Number Square"
 WRITE "--------------"
 FOR counter = 1 TO 10            ← Initialization (counter=1), Testing (counter<=10), Updating (counter++)
 	SET square = counter * counter
 	WRITE counter, square
 ENDFOR
+STOP
 ```
 
 **Breaking down the FOR loop components:**
@@ -116,11 +133,15 @@ D. `IF-THEN-ELSE`
 
 **Q3: Consider the following pseudocode:**
 ```
+DECLARE counter AS INTEGER
+
+START
 SET counter = 10              ← Initialization
 WHILE counter < 5             ← Testing
 	WRITE "Hello"
 	SET counter = counter + 1  ← Updating
 ENDWHILE
+STOP
 ```
 **What is the output of the code above?**
 A. Hello
@@ -131,11 +152,15 @@ D. No output at all.
 
 **Q4: Consider the following pseudocode:**
 ```
+DECLARE counter AS INTEGER
+
+START
 SET counter = 10              ← Initialization
 DO
 	WRITE "Hello"
 	SET counter = counter + 1  ← Updating
 WHILE counter < 5             ← Testing
+STOP
 ```
 **What is the output of the code above?**
 A. Hello

@@ -22,10 +22,10 @@ The loop is repeated when the condition is true (when its value is not 0). The l
 
 **Example Pseudocode:**
 ```
-SET counter = 1
-WHILE counter <= 5
+SET counter = 1                  ← Initialization
+WHILE counter <= 5               ← Testing
 	WRITE "Hello world"
-	SET counter = counter + 1
+	SET counter = counter + 1     ← Updating
 ENDWHILE
 ```
 * **Output:** "Hello world" will be printed 5 times. On the 6th iteration, `counter` will become 6. The condition `6 <= 5` is `False`, so the loop stops.
@@ -39,11 +39,11 @@ As a result, the DO-WHILE loop always performs at least one iteration, even if i
 
 **Example Pseudocode:**
 ```
-SET number = 0
+SET number = 0                    ← Initialization
 DO
 	WRITE number
-	SET number = number + 1
-WHILE number < 10
+	SET number = number + 1         ← Updating
+WHILE number < 10                   ← Testing
 ```
 * **Output:** This will print numbers 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9.
 ### DO-UNTIL Loop
@@ -56,13 +56,14 @@ Sometimes, it is more convenient to write a loop that iterates until a condition
 
 **Example Pseudocode (Password Validation):**
 ```
+SET password = ""                ← Initialization (empty password)
 DO
 	WRITE "Enter the password:"
-	READ password
+	READ password                ← Updating (new input from user)
 	IF password != "prospero" THEN
 		WRITE "Sorry, try again."
 	ENDIF
-UNTIL password == "prospero"
+UNTIL password == "prospero"     ← Testing (condition check)
 WRITE "Password confirmed."
 ```
 * **Logic:** The loop will continue running (`Sorry, try again.`) as long as `password != "prospero"` (the `UNTIL` condition is `False`). It only stops when the user enters "prospero" (the `UNTIL` condition becomes `True`).
@@ -83,15 +84,18 @@ In some situations, it is also helpful to use the counter variable in a calculat
 
 **Example Pseudocode:**
 ```
-SET counter = 0
-SET square = 0
 WRITE "Number Square"
 WRITE "--------------"
-FOR counter = 1 TO 10
+FOR counter = 1 TO 10            ← Initialization (counter=1), Testing (counter<=10), Updating (counter++)
 	SET square = counter * counter
 	WRITE counter, square
 ENDFOR
 ```
+
+**Breaking down the FOR loop components:**
+- **Initialization:** `counter = 1` (sets starting value)
+- **Testing:** `counter <= 10` (checks if loop should continue)  
+- **Updating:** `counter = counter + 1` (increments after each iteration)
 * **Output:** This will print a list of numbers 1 through 10 and their squares.
 
 ## QUIZ
@@ -112,10 +116,10 @@ D. `IF-THEN-ELSE`
 
 **Q3: Consider the following pseudocode:**
 ```
-SET counter = 10
-WHILE counter < 5
+SET counter = 10              ← Initialization
+WHILE counter < 5             ← Testing
 	WRITE "Hello"
-	SET counter = counter + 1
+	SET counter = counter + 1  ← Updating
 ENDWHILE
 ```
 **What is the output of the code above?**
@@ -127,11 +131,11 @@ D. No output at all.
 
 **Q4: Consider the following pseudocode:**
 ```
-SET counter = 10
+SET counter = 10              ← Initialization
 DO
 	WRITE "Hello"
-	SET counter = counter + 1
-WHILE counter < 5
+	SET counter = counter + 1  ← Updating
+WHILE counter < 5             ← Testing
 ```
 **What is the output of the code above?**
 A. Hello
@@ -142,7 +146,12 @@ D. No output at all.
 
 **Q5: (Logic Challenge) You want to print the sequence: `20 14 8 2 -4 -10`. Which `FOR` pseudocode is most appropriate?**
 A. `FOR counter = 20 TO -10`
-B. `FOR counter = 20 TO -10 STEP -6`
+B. `FOR counter = 20 TO -10 STEP -6` ← Init: 20, Test: ≥-10, Update: -6
 C. `FOR counter = 1 TO 6 STEP 6`
 D. `FOR counter = 20 TO -10 STEP 6`
 **Answer: B**
+
+**Explanation:** The three components in the correct answer:
+- **Initialization:** `counter = 20` (starts at 20)
+- **Testing:** `counter >= -10` (continues while ≥ -10)
+- **Updating:** `counter = counter - 6` (decreases by 6 each time)

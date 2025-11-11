@@ -43,7 +43,7 @@ D. IF-THEN-ELSE
 
 **Q2: Consider the following pseudocode:**
 ```
-FOR i = 1 TO 4
+FOR i = 1 TO 4         ← Init: i=1, Test: i≤4, Update: i++
     WRITE "Hello"
 ENDFOR
 ```
@@ -63,7 +63,7 @@ D. Initialization, Testing, Updating
 
 **Q4: Consider the following pseudocode:**
 ```
-FOR x = 1 TO 3
+FOR x = 1 TO 3         ← Init: x=1, Test: x≤3, Update: x++
     WRITE x
 ENDFOR
 ```
@@ -76,7 +76,7 @@ D. 1
 
 **Q5: Consider the following pseudocode:**
 ```
-FOR k = 5 TO 10
+FOR k = 5 TO 10        ← Init: k=5, Test: k≤10, Update: k++
     WRITE "Test"
 ENDFOR
 ```

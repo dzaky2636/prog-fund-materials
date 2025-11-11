@@ -53,15 +53,6 @@ Parameters are data items transferred from a calling module to its subordinate m
 **Two types of parameter passing:**
 * **Passing by Value:** You give a **copy** of the data to the module. If the module changes that data, the original data in the main program **does not** change.
 * **Passing by Reference:** You give the **memory address** of the data. If the module changes that data, the original data in the main program **also changes**.
-
-### Flowchart Examples: Parameter Passing
-
-#### Call By Value (CBV) Example
-![Flowchart CBV](https://i.imgur.com/placeholder_cbv.png)
-
-#### Call By Reference (CBR) Example  
-![Flowchart CBR](https://i.imgur.com/placeholder_cbr.png)
-
 ### Example: From Monolithic to Modular
 **Non-modular (monolithic) algorithm:**
 ```pseudocode

@@ -26,7 +26,7 @@ Let's apply the I-P-O model to a simple problem: "Create a program to calculate 
 ### I-P-O Flowchart Pattern
 
 Visually, the flow will always look like this:
-![Flowchart I-P-O Sederhana](https://badoystudio.com/wp-content/uploads/2018/03/Diagram1.png)
+![Flowchart I-P-O Sederhana](https://i.imgur.com/r5J9Brm.png)
 1. **Start** (Oval)
 2. **Input** `base`, `height` (Parallelogram)
 3. **Process** `area = (base * height) / 2` (Rectangle)

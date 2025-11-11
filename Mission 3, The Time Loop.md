@@ -41,7 +41,7 @@ As a result, the DO-WHILE loop always performs at least one iteration, even if i
 ```
 SET number = 0
 DO
-	PRINT number
+	WRITE number
 	SET number = number + 1
 WHILE number < 10
 ```
@@ -83,8 +83,6 @@ In some situations, it is also helpful to use the counter variable in a calculat
 
 **Example Pseudocode:**
 ```
-DECLARE Integer counter
-DECLARE Integer square
 WRITE "Number Square"
 WRITE "--------------"
 FOR counter = 1 TO 10

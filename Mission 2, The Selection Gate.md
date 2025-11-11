@@ -80,13 +80,13 @@ This is the most common form. "IF condition is True, do A, OTHERWISE (False), do
 
 **Example Pseudocode:**
 ```
-Read account_balance
+READ account_balance
     IF account_balance < 300 THEN
-        service_charge = 5.00
+        SET service_charge = 5.00
     ELSE
-        service_charge = 2.00
+        SET service_charge = 2.00
     ENDIF
-Print service_charge
+WRITE service_charge
 ```
 Here, only one block (either between `THEN` and `ELSE`, or between `ELSE` and `ENDIF`) will be executed.
 
@@ -95,11 +95,11 @@ This structure is used when we only want to do something if the condition is Tru
 
 **Example Pseudocode:**
 ```
-Read student_attendance
+READ student_attendance
     IF student_attendance = "part_time" THEN
-        add 1 to part_time_count
+        SET part_time_count = part_time_count + 1
     ENDIF
-Print part_time_count
+WRITE part_time_count
 ```
 If `student_attendance` is not "part_time", the algorithm will jump directly to `ENDIF` without doing anything.
 
@@ -109,7 +109,7 @@ A combined IF statement contains multiple conditions connected with logical oper
 **Example Pseudocode:**
 ```
 IF student_attendance = "part_time" AND student_gender = "female" THEN
-    add 1 to female_part_time_count
+    SET female_part_time_count = female_part_time_count + 1
 ENDIF
 ```
 If connector AND is used, both conditions must be true for the combined condition to be true.
@@ -120,15 +120,15 @@ This occurs when one `IF` structure is inside another `IF` structure. Used for m
 * **Linear Nested IF:** Used when a field is being tested for various values and a different action is taken for each value.
     ```
     IF record_code = 'A' THEN
-        increment counter_A
+        SET counter_A = counter_A + 1
     ELSE
         IF record_code = 'B' THEN
-            increment counter_B
+            SET counter_B = counter_B + 1
         ELSE
             IF record_code = 'C' THEN
-                increment counter_C
+                SET counter_C = counter_C + 1
             ELSE
-                increment error_counter
+                SET error_counter = error_counter + 1
             ENDIF
         ENDIF
     ENDIF
@@ -139,15 +139,15 @@ This occurs when one `IF` structure is inside another `IF` structure. Used for m
     IF student_attendance = "part_time" THEN
         IF student_gender = "female" THEN
             IF student_age > 21 THEN
-                add 1 to mature_female_pt_students
+                SET mature_female_pt_students = mature_female_pt_students + 1
             ELSE
-                add 1 to young_female_pt_students
+                SET young_female_pt_students = young_female_pt_students + 1
             ENDIF
         ELSE
-            add 1 to male_pt_students
+            SET male_pt_students = male_pt_students + 1
         ENDIF
     ELSE
-        add 1 to full_time_students
+        SET full_time_students = full_time_students + 1
     ENDIF
     ```
 
@@ -157,10 +157,10 @@ The case structure is another way of expressing a linear nested IF statement. It
 **Example Pseudocode:**
 ```
 CASE OF record_code
-    'A' : increment counter_A
-    'B' : increment counter_B
-    'C' : increment counter_C
-    other : increment error_counter
+    'A' : SET counter_A = counter_A + 1
+    'B' : SET counter_B = counter_B + 1
+    'C' : SET counter_C = counter_C + 1
+    other : SET error_counter = error_counter + 1
 ENDCASE
 ```
 This logic is **identical** to the Linear Nested IF example above, but much cleaner.

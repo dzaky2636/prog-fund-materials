@@ -56,13 +56,13 @@ Parameters are data items transferred from a calling module to its subordinate m
 ### Example: From Monolithic to Modular
 **Non-modular (monolithic) algorithm:**
 ```pseudocode
+START
 DECLARE hours_worked AS INTEGER
 DECLARE hourly_rate AS REAL
 DECLARE weekly_pay AS REAL
 DECLARE overtime_hours AS INTEGER
 DECLARE overtime_pay AS REAL
 
-START
 READ hours_worked
 READ hourly_rate
 
@@ -81,10 +81,10 @@ STOP
 **Now, let's make it modular:**
 ```pseudocode
 // Main Program (Mainline)
+START
 DECLARE hours_worked AS INTEGER
 DECLARE hourly_rate AS REAL
 
-START
 READ hours_worked
 READ hourly_rate
 
@@ -96,6 +96,7 @@ STOP
 ```pseudocode
 // --- Separate Module Definition ---
 MODULE Calculate_Employee_Pay(hours, rate)
+    START
     DECLARE weekly_pay AS REAL
     DECLARE overtime_hrs AS INTEGER
     DECLARE overtime_pay AS REAL
@@ -109,6 +110,7 @@ MODULE Calculate_Employee_Pay(hours, rate)
     ENDIF
     
     WRITE weekly_pay
+    STOP
 END MODULE
 ```
 
@@ -163,13 +165,15 @@ D. Local Variables
 **Q5: (Logic Challenge) Consider this pseudocode:**
 ```pseudocode
 MODULE AddOne(counter)
+    START
     SET counter = counter + 1
+    STOP
 END MODULE
 
 // Main Program
+START
 DECLARE my_value AS INTEGER
 
-START
 SET my_value = 5
 AddOne(my_value) // Assume this is 'Passing by Value'
 WRITE my_value

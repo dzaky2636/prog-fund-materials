@@ -58,11 +58,11 @@ Algorithms have three basic control structures:
 
 **Example of Sequence Structure:**
 ```
+START
 DECLARE student_name AS STRING
 DECLARE test_score AS INTEGER
 DECLARE grade_points AS REAL
 
-START
 READ student_name
 READ test_score
 SET grade_points = test_score * 0.1
@@ -104,16 +104,16 @@ Pseudocode is another way of representing algorithms using simple English, witho
 * Statements are written in simple English
 * Each instruction is written on a separate line
 * Keywords such as `DECLARE`, `IF`, `THEN`, `ELSE`, `ENDIF`, `READ`, `WRITE`, `SET` are often used and written in capital letters
-* DECLARE statements must appear at the beginning, before START, to establish variables and their data types
+* DECLARE statements must appear at the beginning, immediately after START, to establish variables and their data types
 * Indentation is used to signify particular control structures
 * Each set of instructions is written from top to bottom, with only one entry and one exit
 
 **Example Pseudocode for service charge calculation:**
 ```
+START
 DECLARE account_balance AS REAL
 DECLARE service_charge AS REAL
 
-START
 READ account_balance
     IF account_balance < 300 
         THEN SET service_charge = 5.00 
@@ -123,6 +123,21 @@ WRITE service_charge
 STOP
 ```
 
+
+```
+START
+
+DECLARE account_balance AS REAL
+DECLARE service_charge AS REALS
+
+READ account_balance
+    IF account_balance < 300 
+        THEN SET service_charge = 5.00 
+        ELSE SET service_charge = 2.00 
+    ENDIF
+WRITE service_charge
+STOP
+```
 ---
 
 ## Important Note: Terminology Framework
@@ -144,10 +159,9 @@ STOP
 
 ### Understanding DECLARE vs SET
 
-**DECLARE** and **SET** serve different purposes and cannot be used interchangeably:
+**DECLARE** and **SET** serve different purposes:
 
 **DECLARE:**
-- Used ONLY at the beginning of pseudocode/flowcharts
 - Establishes a variable's existence and data type
 - Format: `DECLARE variable_name AS data_type`
 - Used once per variable to "introduce" it to the algorithm

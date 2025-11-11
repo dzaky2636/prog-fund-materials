@@ -22,9 +22,9 @@ The loop is repeated when the condition is true (when its value is not 0). The l
 
 **Example Pseudocode:**
 ```
+START
 DECLARE counter AS INTEGER
 
-START
 SET counter = 1                  ← Initialization
 WHILE counter <= 5               ← Testing
 	WRITE "Hello world"
@@ -43,9 +43,9 @@ As a result, the DO-WHILE loop always performs at least one iteration, even if i
 
 **Example Pseudocode:**
 ```
+START
 DECLARE number AS INTEGER
 
-START
 SET number = 0                    ← Initialization
 DO
 	WRITE number
@@ -64,9 +64,9 @@ Sometimes, it is more convenient to write a loop that iterates until a condition
 
 **Example Pseudocode (Password Validation):**
 ```
+START
 DECLARE password AS STRING
 
-START
 SET password = ""                ← Initialization (empty password)
 DO
 	WRITE "Enter the password:"
@@ -96,10 +96,10 @@ In some situations, it is also helpful to use the counter variable in a calculat
 
 **Example Pseudocode:**
 ```
+START
 DECLARE counter AS INTEGER
 DECLARE square AS INTEGER
 
-START
 WRITE "Number Square"
 WRITE "--------------"
 FOR counter = 1 TO 10            ← Initialization (counter=1), Testing (counter<=10), Updating (counter++)
@@ -133,9 +133,9 @@ D. `IF-THEN-ELSE`
 
 **Q3: Consider the following pseudocode:**
 ```
+START
 DECLARE counter AS INTEGER
 
-START
 SET counter = 10              ← Initialization
 WHILE counter < 5             ← Testing
 	WRITE "Hello"
@@ -152,9 +152,9 @@ D. No output at all.
 
 **Q4: Consider the following pseudocode:**
 ```
+START
 DECLARE counter AS INTEGER
 
-START
 SET counter = 10              ← Initialization
 DO
 	WRITE "Hello"

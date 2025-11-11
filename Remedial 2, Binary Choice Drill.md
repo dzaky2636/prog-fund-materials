@@ -46,9 +46,9 @@ Let's ensure we master this with some quick exercises!
 ## QUIZ
 **Q1: Consider the following pseudocode:**
 ```
+START
 DECLARE value AS INTEGER
 
-START
 SET value = 15
 IF value > 10 THEN
 	WRITE "Greater"
@@ -66,9 +66,9 @@ D. No output
 
 **Q2: Consider the following pseudocode:**
 ```
+START
 DECLARE temperature AS INTEGER
 
-START
 SET temperature = 25
 IF temperature <= 20 THEN
 	WRITE "Cold"
@@ -93,9 +93,9 @@ D. No block is executed
 
 **Q4: Consider the following algorithm for checking even/odd numbers:**
 ```
+START
 DECLARE number AS INTEGER
 
-START
 WRITE "Enter a number:"
 READ number
 IF number MOD 2 = 0 THEN
@@ -114,10 +114,10 @@ D. Error
 
 **Q5: Consider the following pseudocode:**
 ```
+START
 DECLARE x AS INTEGER
 DECLARE y AS INTEGER
 
-START
 SET x = 5
 SET y = 5
 IF x = y THEN

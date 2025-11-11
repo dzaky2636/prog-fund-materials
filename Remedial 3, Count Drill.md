@@ -21,9 +21,9 @@ The FOR loop flowchart shows the three essential components: initialization, tes
 In pseudocode, we can shorten these three steps into one neat `FOR` command:
 
 ```pseudocode
+START
 DECLARE counter AS INTEGER
 
-START
 FOR counter = 1 TO 5
     WRITE "Hello"
 ENDFOR
@@ -47,9 +47,9 @@ D. IF-THEN-ELSE
 
 **Q2: Consider the following pseudocode:**
 ```
+START
 DECLARE i AS INTEGER
 
-START
 FOR i = 1 TO 4         ← Init: i=1, Test: i≤4, Update: i++
     WRITE "Hello"
 ENDFOR
@@ -71,9 +71,9 @@ D. Initialization, Testing, Updating
 
 **Q4: Consider the following pseudocode:**
 ```
+START
 DECLARE x AS INTEGER
 
-START
 FOR x = 1 TO 3         ← Init: x=1, Test: x≤3, Update: x++
     WRITE x
 ENDFOR
@@ -88,9 +88,9 @@ D. 1
 
 **Q5: Consider the following pseudocode:**
 ```
+START
 DECLARE k AS INTEGER
 
-START
 FOR k = 5 TO 10        ← Init: k=5, Test: k≤10, Update: k++
     WRITE "Test"
 ENDFOR

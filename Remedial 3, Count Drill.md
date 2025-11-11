@@ -22,7 +22,7 @@ In pseudocode, we can shorten these three steps into one neat `FOR` command:
 
 ```pseudocode
 START
-DECLARE counter AS INTEGER
+DECLARE INTEGER counter
 
 FOR counter = 1 TO 5
     WRITE "Hello"
@@ -48,7 +48,7 @@ D. IF-THEN-ELSE
 **Q2: Consider the following pseudocode:**
 ```
 START
-DECLARE i AS INTEGER
+DECLARE INTEGER i
 
 FOR i = 1 TO 4         ← Init: i=1, Test: i≤4, Update: i++
     WRITE "Hello"
@@ -72,7 +72,7 @@ D. Initialization, Testing, Updating
 **Q4: Consider the following pseudocode:**
 ```
 START
-DECLARE x AS INTEGER
+DECLARE INTEGER x
 
 FOR x = 1 TO 3         ← Init: x=1, Test: x≤3, Update: x++
     WRITE x
@@ -89,7 +89,7 @@ D. 1
 **Q5: Consider the following pseudocode:**
 ```
 START
-DECLARE k AS INTEGER
+DECLARE INTEGER k
 
 FOR k = 5 TO 10        ← Init: k=5, Test: k≤10, Update: k++
     WRITE "Test"

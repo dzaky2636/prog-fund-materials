@@ -57,11 +57,11 @@ Parameters are data items transferred from a calling module to its subordinate m
 **Non-modular (monolithic) algorithm:**
 ```pseudocode
 START
-DECLARE hours_worked AS INTEGER
-DECLARE hourly_rate AS REAL
-DECLARE weekly_pay AS REAL
-DECLARE overtime_hours AS INTEGER
-DECLARE overtime_pay AS REAL
+DECLARE INTEGER hours_worked
+DECLARE REAL hourly_rate
+DECLARE REAL weekly_pay
+DECLARE INTEGER overtime_hours
+DECLARE REAL overtime_pay
 
 READ hours_worked
 READ hourly_rate
@@ -82,8 +82,8 @@ STOP
 ```pseudocode
 // Main Program (Mainline)
 START
-DECLARE hours_worked AS INTEGER
-DECLARE hourly_rate AS REAL
+DECLARE INTEGER hours_worked
+DECLARE REAL hourly_rate
 
 READ hours_worked
 READ hourly_rate
@@ -97,9 +97,9 @@ STOP
 // --- Separate Module Definition ---
 MODULE Calculate_Employee_Pay(hours, rate)
     START
-    DECLARE weekly_pay AS REAL
-    DECLARE overtime_hrs AS INTEGER
-    DECLARE overtime_pay AS REAL
+    DECLARE REAL weekly_pay
+    DECLARE INTEGER overtime_hrs
+    DECLARE REAL overtime_pay
 
     IF hours <= 35 THEN
         SET weekly_pay = rate * hours
@@ -172,7 +172,7 @@ END MODULE
 
 // Main Program
 START
-DECLARE my_value AS INTEGER
+DECLARE INTEGER my_value
 
 SET my_value = 5
 AddOne(my_value) // Assume this is 'Passing by Value'

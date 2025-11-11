@@ -81,8 +81,8 @@ This is the most common form. "IF condition is True, do A, OTHERWISE (False), do
 **Example Pseudocode:**
 ```
 START
-DECLARE account_balance AS REAL
-DECLARE service_charge AS REAL
+DECLARE REAL account_balance
+DECLARE REAL service_charge
 
 READ account_balance
     IF account_balance < 300 THEN
@@ -101,8 +101,8 @@ This structure is used when we only want to do something if the condition is Tru
 **Example Pseudocode:**
 ```
 START
-DECLARE student_attendance AS STRING
-DECLARE part_time_count AS INTEGER
+DECLARE STRING student_attendance
+DECLARE INTEGER part_time_count
 
 READ student_attendance
     IF student_attendance = "part_time" THEN
@@ -119,9 +119,9 @@ A combined IF statement contains multiple conditions connected with logical oper
 **Example Pseudocode:**
 ```
 START
-DECLARE student_attendance AS STRING
-DECLARE student_gender AS STRING
-DECLARE female_part_time_count AS INTEGER
+DECLARE STRING student_attendance
+DECLARE STRING student_gender
+DECLARE INTEGER female_part_time_count
 
 IF student_attendance = "part_time" AND student_gender = "female" THEN
     SET female_part_time_count = female_part_time_count + 1
@@ -136,13 +136,13 @@ This occurs when one `IF` structure is inside another `IF` structure. Used for m
 * **Linear Nested IF:** Used when a field is being tested for various values and a different action is taken for each value.
     ```
     START
-    DECLARE record_code AS CHARACTER
-    DECLARE counter_A AS INTEGER
-    DECLARE counter_B AS INTEGER
-    DECLARE counter_C AS INTEGER
-    DECLARE error_counter AS INTEGER
+    DECLARE CHARACTER record_code
+    DECLARE INTEGER counter_A
+    DECLARE INTEGER counter_B
+    DECLARE INTEGER counter_C
+    DECLARE INTEGER error_counter
 
-    READ record_code
+    read record_code
     IF record_code = 'A' THEN
         SET counter_A = counter_A + 1
     ELSE
@@ -162,13 +162,13 @@ This occurs when one `IF` structure is inside another `IF` structure. Used for m
 * **Non-Linear Nested IF:** Occurs when multiple different conditions need to be satisfied before a particular action can occur.
     ```
     START
-    DECLARE student_attendance AS STRING
-    DECLARE student_gender AS STRING
-    DECLARE student_age AS INTEGER
-    DECLARE mature_female_pt_students AS INTEGER
-    DECLARE young_female_pt_students AS INTEGER
-    DECLARE male_pt_students AS INTEGER
-    DECLARE full_time_students AS INTEGER
+    DECLARE STRING student_attendance
+    DECLARE STRING student_gender
+    DECLARE INTEGER student_age
+    DECLARE INTEGER mature_female_pt_students
+    DECLARE INTEGER young_female_pt_students
+    DECLARE INTEGER male_pt_students
+    DECLARE INTEGER full_time_students
 
     READ student_attendance, student_gender, student_age
     IF student_attendance = "part_time" THEN
@@ -193,11 +193,11 @@ The case structure is another way of expressing a linear nested IF statement. It
 **Example Pseudocode:**
 ```
 START
-DECLARE record_code AS CHARACTER
-DECLARE counter_A AS INTEGER
-DECLARE counter_B AS INTEGER
-DECLARE counter_C AS INTEGER
-DECLARE error_counter AS INTEGER
+DECLARE CHARACTER record_code
+DECLARE INTEGER counter_A
+DECLARE INTEGER counter_B
+DECLARE INTEGER counter_C
+DECLARE INTEGER error_counter
 
 READ record_code
 CASE OF record_code
@@ -263,8 +263,8 @@ D. All types of loops
 A.
 ```
 START
-DECLARE score AS INTEGER
-DECLARE grade AS CHARACTER
+DECLARE INTEGER score
+DECLARE CHARACTER grade
 
 READ score
 IF score >= 90 THEN
@@ -282,8 +282,8 @@ STOP
 B.
 ```
 START
-DECLARE score AS INTEGER
-DECLARE grade AS CHARACTER
+DECLARE INTEGER score
+DECLARE CHARACTER grade
 
 READ score
 CASE OF score
@@ -297,8 +297,8 @@ STOP
 C.
 ```
 START
-DECLARE score AS INTEGER
-DECLARE grade AS CHARACTER
+DECLARE INTEGER score
+DECLARE CHARACTER grade
 
 READ score
 IF score >= 90 THEN
@@ -318,8 +318,8 @@ STOP
 D.
 ```
 START
-DECLARE score AS INTEGER
-DECLARE grade AS CHARACTER
+DECLARE INTEGER score
+DECLARE CHARACTER grade
 
 READ score
 IF score >= 90 THEN

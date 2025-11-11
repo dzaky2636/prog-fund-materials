@@ -28,8 +28,8 @@ D. Circle (Connector)
 **Q3: Consider the following pseudocode:**
 ```pseudocode
 START
-DECLARE x AS INTEGER
-DECLARE y AS INTEGER
+DECLARE INTEGER x
+DECLARE INTEGER y
 
 SET x = 10
 SET y = 20
@@ -62,8 +62,8 @@ D. WHILE is definite iteration, DO-WHILE is indefinite iteration.
 **Q5: Consider the following pseudocode:**
 ```pseudocode
 START
-DECLARE total AS INTEGER
-DECLARE i AS INTEGER
+DECLARE INTEGER total
+DECLARE INTEGER i
 
 SET total = 0
 FOR i = 1 TO 4
@@ -97,7 +97,7 @@ END MODULE
 
 // Main Program
 START
-DECLARE my_value AS INTEGER
+DECLARE INTEGER my_value
 
 SET my_value = 5
 Double(my_value)
@@ -114,7 +114,7 @@ D. Error
 **Q8: Consider this pseudocode:**
 ```pseudocode
 START
-DECLARE x AS INTEGER
+DECLARE INTEGER x
 
 SET x = 5
 
@@ -140,8 +140,8 @@ D. Pass-by-Reference.
 **Q10: (Logic Challenge) Consider the following pseudocode:**
 ```pseudocode
 START
-DECLARE a AS INTEGER
-DECLARE b AS INTEGER
+DECLARE INTEGER a
+DECLARE INTEGER b
 
 SET a = 5
 SET b = 10

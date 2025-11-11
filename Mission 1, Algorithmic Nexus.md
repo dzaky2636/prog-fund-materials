@@ -59,9 +59,9 @@ Algorithms have three basic control structures:
 **Example of Sequence Structure:**
 ```
 START
-DECLARE student_name AS STRING
-DECLARE test_score AS INTEGER
-DECLARE grade_points AS REAL
+DECLARE STRING student_name
+DECLARE INTEGER test_score
+DECLARE REAL grade_points
 
 READ student_name
 READ test_score
@@ -111,8 +111,8 @@ Pseudocode is another way of representing algorithms using simple English, witho
 **Example Pseudocode for service charge calculation:**
 ```
 START
-DECLARE account_balance AS REAL
-DECLARE service_charge AS REAL
+DECLARE REAL account_balance
+DECLARE REAL service_charge
 
 READ account_balance
     IF account_balance < 300 
@@ -163,7 +163,7 @@ STOP
 
 **DECLARE:**
 - Establishes a variable's existence and data type
-- Format: `DECLARE variable_name AS data_type`
+- Format: `DECLARE data_type variable_name`
 - Used once per variable to "introduce" it to the algorithm
 - Think of it as "registering" the variable before use
 
@@ -175,11 +175,11 @@ STOP
 - Think of it as "filling" the variable with data
 
 **Standard Data Types for DECLARE:**
-- `STRING` - for text values ("Hello", "John Doe")
-- `INTEGER` - for whole numbers (1, 100, -5)
-- `REAL` - for decimal numbers (3.14, 98.6, -2.5)
-- `BOOLEAN` - for true/false values
-- `CHARACTER` - for single characters ('A', 'x', '5')
+- `STRING` - for text values ("Hello", "John Doe") → `DECLARE STRING variable_name`
+- `INTEGER` - for whole numbers (1, 100, -5) → `DECLARE INTEGER variable_name`
+- `REAL` - for decimal numbers (3.14, 98.6, -2.5) → `DECLARE REAL variable_name`
+- `BOOLEAN` - for true/false values → `DECLARE BOOLEAN variable_name`
+- `CHARACTER` - for single characters ('A', 'x', '5') → `DECLARE CHARACTER variable_name`
 
 Think of this like learning basic military commands before specialized operations. We build your understanding in layers, just as real cadets master fundamentals before advanced protocols. This isn't changing the rules—it's expanding your operational vocabulary as your skills develop!
 

@@ -47,7 +47,7 @@ Let's ensure we master this with some quick exercises!
 **Q1: Consider the following pseudocode:**
 ```
 START
-DECLARE value AS INTEGER
+DECLARE INTEGER value
 
 SET value = 15
 IF value > 10 THEN
@@ -67,7 +67,7 @@ D. No output
 **Q2: Consider the following pseudocode:**
 ```
 START
-DECLARE temperature AS INTEGER
+DECLARE INTEGER temperature
 
 SET temperature = 25
 IF temperature <= 20 THEN
@@ -94,7 +94,7 @@ D. No block is executed
 **Q4: Consider the following algorithm for checking even/odd numbers:**
 ```
 START
-DECLARE number AS INTEGER
+DECLARE INTEGER number
 
 WRITE "Enter a number:"
 READ number
@@ -115,8 +115,8 @@ D. Error
 **Q5: Consider the following pseudocode:**
 ```
 START
-DECLARE x AS INTEGER
-DECLARE y AS INTEGER
+DECLARE INTEGER x
+DECLARE INTEGER y
 
 SET x = 5
 SET y = 5

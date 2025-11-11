@@ -39,7 +39,7 @@ Here are the 6 standard flowchart symbols we will use:
 **1. Terminal Symbol (Oval):** Indicates the starting or stopping point in the logic. Every flowchart should begin and end with a terminal symbol.
 **2. Input/Output Symbol (Parallelogram):** Represents an input or output process in an algorithm, such as reading input or writing output.
 **3. Process Symbol (Rectangle):** Represents any single process in an algorithm, such as assigning a value or performing a calculation. The flow of control is sequential.
-**4. Decision Symbol (Diamond):** Represents a decision in the logic involving the comparison of two values. Alternative paths are followed, depending on whether the decision symbol is true or false.
+**4. Decision Symbol (Diamond):** Represents a decision point in the logic where the flow of control branches into different paths. This can be a simple true/false condition (IF-ELSE) or a multi-way branch (CASE structure).
 **5. Predefined Process Symbol (Rectangle with vertical lines):** Represents a module in an algorithm — that is, a predefined process that has its own flowchart.
 **6. Connector Symbol (Circle):** Used as a connector to show a jump from one point in the process flow to another. Connectors are usually labeled with capital letters (A, B, AA) to show matching jump points.
 
@@ -52,6 +52,32 @@ Algorithms have three basic control structures:
 1. **Sequence:** The straightforward execution of one processing step after another. Instructions are executed one by one, from top to bottom, without branching.
 2. **Selection:** The presentation of a condition and the choice between two actions, the choice depending on whether the condition is true or false. This structure uses the Decision (Diamond) symbol.
 3. **Repetition:** The presentation of a set of instructions to be performed repeatedly, as long as a condition is true. (We will cover this in future missions!)
+
+### Sequence Control Structure
+![image](https://i.imgur.com/mJqnZ0l.png)
+**Sequence** is the most fundamental control structure. In sequence control, instructions are executed one after another in the exact order they are written, from top to bottom. There is no branching or jumping—each step follows the previous step directly.
+
+**Example of Sequence Structure:**
+```
+START
+READ student_name
+READ test_score
+SET grade_points = test_score * 0.1
+WRITE student_name
+WRITE grade_points
+STOP
+```
+
+In this example, each instruction follows the previous one in sequence:
+1. Program starts
+2. Read student name
+3. Read test score
+4. Calculate grade points
+5. Display student name
+6. Display grade points
+7. Program stops
+
+This straightforward, step-by-step execution is the foundation of all algorithms. Even complex programs with selections and repetitions are built upon this basic sequential flow.
 
 ### Selection Control Structure Examples
 ![image](https://i.imgur.com/2tXScFj.png)
@@ -88,6 +114,26 @@ READ account_balance
 WRITE service_charge
 ```
 
+---
+
+## Important Note: Terminology Framework
+
+**Cadet, attention!** As you progress through your training missions, you'll notice that our terminology becomes more precise and specialized.
+
+**In this foundational mission**, we use simplified, general terms:
+- **READ** - getting data input
+- **WRITE** - producing output  
+- **SET** - assigning values
+
+**In advanced missions**, you'll learn more precise terminology:
+- **INPUT/GET** - reading from keyboard
+- **READ** - reading from files
+- **DISPLAY/OUTPUT** - showing on screen
+- **WRITE** - writing to storage devices  
+- **PRINT** - sending to printer
+
+Think of this like learning basic military commands before specialized operations. We build your understanding in layers, just as real cadets master fundamentals before advanced protocols. This isn't changing the rules—it's expanding your operational vocabulary as your skills develop!
+
 ## QUIZ
 
 **Q1: What is the best definition of an Algorithm?**
@@ -108,15 +154,15 @@ D. Oval
 A. Starting or ending a program.
 B. Performing calculations (e.g., `total = a + b`).
 C. Reading input from the user (e.g., `READ value`).
-D. Representing a condition (like IF/ELSE) that has a True or False answer.
+D. Representing decision points or branching logic in an algorithm.
 **Answer: D**
 
-**Q4: In pseudocode, which keyword is most commonly used to display data to the screen?**
+**Q4: In pseudocode, which keyword is most commonly used for producing output?**
 A. READ
 B. WRITE
 C. SET
 D. IF
-**Answer: B**
+**Answer: B** (Note: In this foundational mission, WRITE represents general output. In advanced missions, we'll learn specific terms like DISPLAY for screen output.)
 
 **Q5: (Logic Challenge) Which pseudocode is most appropriate to determine if someone "Passes" if their grade is 70 or more, and "Fails" if less?**
 A.

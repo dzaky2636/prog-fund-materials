@@ -83,6 +83,8 @@ In some situations, it is also helpful to use the counter variable in a calculat
 
 **Example Pseudocode:**
 ```
+SET counter = 0
+SET square = 0
 WRITE "Number Square"
 WRITE "--------------"
 FOR counter = 1 TO 10
